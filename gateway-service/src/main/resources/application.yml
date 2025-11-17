@@ -5,10 +5,10 @@ spring:
         webmvc:
           routes:
             - id: r1
-              uri: "http://localhost:8080"
+              uri: lb://CUSTUMER-SERVICE
               predicates:
-                - Path=/api/customers/**
+                - Path=/api/costumers/**
             - id: r2
-              uri: "http://localhost:8082"
+              uri: lb://INVENTERY-SERVICE
               predicates:
                 - Path=/api/products/**
